@@ -1,0 +1,755 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prapti - Developer Portfolio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@400;600;700&display=swap" rel="stylesheet">
+
+    <style>
+        html{
+            scroll-behavior: smooth;}
+body{
+    *{
+        margin:0;
+        padding:0;
+    font-family:I'poppins',sans-serif;
+    }
+    background-color:black;
+    color:white;
+}
+nav{
+    display:flex;
+    justify-content:space-around;
+    align-items:center;
+    height:70px;
+    background-color:#f72064;
+}
+nav ul{
+    display:flex;
+    justify-content:center;
+}
+nav ul li{
+    list-style:none;
+    margin:0 23px;
+}
+nav ul li a{
+    color:white;
+    text-decoration:none;
+
+}
+nav ul li a:hover{
+color:#ff004f;
+font-size:1.1rem;
+}
+main hr{
+     border:0;
+    background-color:#ff004f;
+    height:1.2 px;
+    margin:40px 84px;
+   
+}
+.left{
+    font-size: 2rem;
+}
+.firstsection{
+    display:flex;
+    justify-content:space-around;
+    margin:90px 0;
+}
+.leftsection{
+    font-size:3rem;
+    margin:50px 0;
+
+}
+.leftsection .button{
+    padding:23px;
+}
+.leftsection .btn{
+padding:12px;
+background-color:#ff004f;
+color:white;
+border:2px solid white;
+border-radius:6px;
+font-size:20px;
+cursor:pointer;
+}
+.rightsection img{ 
+    width:50%;
+
+}
+.purple{
+    color:#ff004f;
+}
+.text-gray{
+    color:gray;
+}
+#element{
+ color:#ff004f;
+}
+.secondsection{
+    max-width:80vw;
+    margin:auto;
+    height:80vh;
+}
+.secondsection h1{
+    font-size:1.9 rem;
+}
+.secondsection .box{
+                background:white; 
+            width:77vw;
+            height:2px;
+             margin:54px 0;
+             display:flex;
+}
+.secondsection .vertical{
+    height:93px;
+    width:1px;
+    background-color:white;
+    margin:0 120px;
+    
+}
+.image-top{
+    width:23px;
+    position:relative;
+    top:-23px;
+    left:-9px;
+}
+.vertical-title{
+    position:relative;
+    top:75px;
+    width:150px;
+    font-size:14px;
+
+}
+.vertical-desc{
+position:relative;
+top:86px;
+color:gray;
+width:150px;
+font-size:9px;
+
+}
+
+
+/*- ----about----*/
+#about{
+    padding:100px 80px;
+    color:#bdbdbd;
+
+}
+.row{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.about-col-1{
+    flex-basis: 35%;
+
+}
+.about-col-1 img{
+
+    border-radius: 15px;
+}
+.about-col-2{
+    flex-basis: 60%;
+}
+.sub-title{
+    font-size: 60px;
+    font-weight: 600;
+    color:white;
+}
+.tab-titles{
+    display: flex;
+    margin:20px 0 40px;
+}
+.tab-links{
+    margin-right: 50px;
+    font-size: 18px;
+    font-weight: 500;
+    cursor: pointer;
+    position: relative;
+}
+.tab-links::after{
+     content: '';
+    height: 3px;
+    width: 0;
+    background:#ff004f;
+    position: absolute;
+    left: 0;
+    bottom: -8px;
+    transition: 0.5s;
+}
+.tab-links.active-link:after{
+
+    width: 100%;
+
+}
+.tab-contents ul li{
+    list-style: none;
+    margin:10px 0;
+
+}
+.tab-contents ul li span{
+    color:#ff004f;
+    font-size:14px;
+
+}
+.tab-contents{
+    display: none;
+}
+.tab-contents.active-tab{
+    display: block;
+}
+/*  ------ services---   */
+#services{
+    padding:30px 0;
+
+}
+
+.services-list{
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(250px ,1fr));
+    grid-gap:40px;
+margin-top:50px;
+
+}
+.services-list div{
+    background: #262626;
+    padding:40px;
+    font-size:20px;
+font-weight:300;
+border-radius: 10px;
+transition:background 0.5s , transform 0.5s;
+    
+}
+.services-list div i{
+    font-size: 50px;
+    margin-bottom:30px;
+
+}
+.services-list div img{
+    width: 50px;
+    margin-bottom:30px;
+color: black;
+}
+.services-list div h2{
+    font-size:30px;
+    font-weight:500;
+    margin-bottom:15px;
+
+}
+.services-list div a{
+    text-decoration: none;
+    color:#fff;
+    font-size: 12px;
+    margin-top:20px;
+    display: inline-block;
+}
+.services-list div:hover{
+    background:#ff004f;
+    transform:translate(-10px);
+}
+#portfolio{
+    padding:50px 0;
+
+}
+.work-list{
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(250px ,1fr));
+    grid-gap:40px;
+margin-top:50px;
+}
+.work{
+    border-radius:10px;
+    position: relative;
+    overflow: hidden;
+}
+.work img{
+
+    height: 330px;
+    width:100%;
+    border-radius: 10px;
+    display: block;
+    transition: transform 0.5s;
+
+
+}
+ .layer{
+    width:100%;
+    height:0;
+    background: linear-gradient(rgba(0,0,0,0.6),#ff004f);
+    border-radius: 10px;
+    position: absolute;
+    left:0;
+    bottom:0;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 0 40px;
+text-align: center;
+font-size:14px;
+transition: height 0.5s;
+
+}
+.layer h3{
+    font-weight: 500;
+    font-size: 30px;
+    margin-bottom:20px;
+     
+}
+.layer a{
+    margin-top:20px;
+    color: #ff004f;
+    text-decoration: none;
+    font-size:18px;
+    line-height:60px;
+    background:white;
+    width:60px;
+    height:60px;
+    border-radius: 50%;
+    text-align: center;
+}
+.work:hover img{
+    transform: scale(1.1);
+
+}
+.work:hover .layer{
+    height: 100%;
+}
+.btn{
+    display: block;
+    margin: 50px auto;
+    width:fit-content;
+    border: 1px solid #ff004f;
+    padding:14px 50px;
+    border-radius: 6px;
+    text-decoration: none;
+    color:#fff;
+transition:background 0.5s;
+
+}
+.btn:hover{
+    background:#ff004f;
+
+}
+.social-icon img{
+background: #c9748f;
+width:3%;
+}
+.contact-left{
+    flex-basis: 35%;
+margin-left: 70px;
+
+}
+.contact-right{
+    flex-basis: 60%;
+}
+.contact-left p{
+    margin-top:30px ;
+}
+.contact-left p img{
+    color: #ff004f;
+    margin-right: 15px;
+  
+font-size: 25px;
+}
+.social-icon{
+    margin-top: 30px;
+width:190%;
+}
+.social-icon img{
+ 
+
+    margin-right: 15px;
+    color:#ababab;
+transition: transform 0.5s;
+
+}
+.social-icon img:hover{
+    color:#ff004f;
+    transform: translate(-5px);
+
+}
+.btn.btn2{
+display:inline-block;
+background: #ff004f;
+
+}
+.contact-right form{
+    width: 100%;
+}
+form input,form textarea{
+width:80% ;
+border:0;
+outline:none;
+background: #262626;
+padding: 15px;
+margin: 15px 0;
+color: #fff;
+font-size:18px;
+border-radius: 6px;
+  
+}
+form btn2{
+    padding:14px 60px;
+    font-size:18px;
+    margin-top:20px;
+    cursor:pointer;
+
+
+
+}
+.copyright{
+    width:100%;
+    text-align:center;
+    padding:25px 0;
+    background:#262626;
+    font-weight: 300;
+    margin-top:20px;
+
+
+}
+/*----------------------- css fo smallscren ----------------*/
+.right img{
+    display:none;
+
+}
+@media only screen and (max-width:600px){
+    #header{
+        background-image:url();
+    }
+    
+    .leftsection{
+        font-size: 30px;
+    }
+    .right img{
+    display:block;
+    
+
+}
+.sub-title{
+    font-size:40px;
+
+}
+.about-col-1,.about-col-2{
+    flex-basis: 100%;
+
+}
+.about-col-1{
+    margin-bottom: 30px;
+}
+.about-col-2{
+    font-size:20px;
+    
+}
+.tab-links{
+    font-size:16px;
+    margin-right:20px;
+
+}
+.contact-left, .contact-right{
+    flex-basis: 100%;
+
+    }
+    .copyright{
+        font-size: 14px;}
+}
+    </style>
+   <script src="https://kit.fontawesome.com/c4254e24a8.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    
+    <header>
+  <nav>
+    <div class="left">Prapti's Portfolio</div>
+    <div class="right">
+    <ul>
+<li><a href="index.html">Home</a></li>
+<li><a href="#about">About</a></li>
+<li><a href="#services">Services</a></li>
+<li><a href="#portfolio">Portfolio</a></li>
+<li><a href="#contact">Contact</a></li>
+
+        </ul>
+    <!---<img src="menue.png" width="7%" alt="">-->
+    </div>
+  </nav>
+  </header>
+  <main>
+    <section class="firstsection">
+        <div class="leftsection">
+            Hi, My Name Is <span class="purple">Prapti</span>
+            <div>  And I Am A Passionate</div>
+            
+             <span id="element"></span>
+             <div class="button">
+       
+         
+         </div></div>
+        <div class="rightsection">
+<img src="bg.png" alt="">
+        </div>
+        
+    </section>
+    <hr style="
+    border:0;
+    height:1.2px;
+      border:0;
+    background-color:#ff004f;
+    margin:40px 84px;
+       ">
+    <!----<section class="secondsection">
+       
+        <span class="text-gray">what I have done so far</span>
+        <h1>Work Experiences</h1>
+    <div class="box">
+     <div class="vertical"><img class="image-top"src="developer.png" alt=""> 
+    <div class="vertical-title">
+        HTML Developer-youtub (2023-2024)
+         </div>
+         
+        <div class="vertical-desc">
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. At nisi possimus quod nesciunt quibusdam ipsam explicabo nam, expedita magni ratione minus optio tempora!
+        </div>
+        </div>   <div class="vertical"><img class="image-top"src="developer.png" alt=""> 
+    <div class="vertical-title">
+        Sofware Developer (2023-2024)
+         </div>
+        <div class="vertical-desc">
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. At nisi possimus quod nesciunt quibusdam ipsam explicabo nam, expedita magni ratione minus optio tempora!
+        </div>
+        </div>   <div class="vertical"><img class="image-top"src="developer.png" alt=""> 
+    <div class="vertical-title">
+        HTML Developer (2023-2024)
+         </div>
+        <div class="vertical-desc">
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. At nisi possimus quod nesciunt quibusdam ipsam explicabo nam, expedita magni ratione minus optio tempora!
+        </div>
+        </div>   <div class="vertical"><img class="image-top"src="developer.png" alt=""> 
+    <div class="vertical-title">
+        HTML Developer (2023-2024)
+         </div>
+        <div class="vertical-desc">
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. At nisi possimus quod nesciunt quibusdam ipsam explicabo nam, expedita magni ratione minus optio tempora!
+        </div>
+        </div>   <div class="vertical"><img class="image-top"src="developer.png" alt=""> 
+    <div class="vertical-title">
+        HTML Developer (2023-2024)
+         </div>
+        <div class="vertical-desc">
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. At nisi possimus quod nesciunt quibusdam ipsam explicabo nam, expedita magni ratione minus optio tempora!
+        </div>
+        </div>  
+         
+        
+    </div>
+
+    </section> --->
+  </main>
+ <footer>
+    <div class="footer">
+     
+<!--<div class="footer-rights">copyright &#169: praptiportfolio.com  | All rights Reserved</div>-->
+ </footer>
+  <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+  <script>
+    var typed = new Typed('#element', {
+      strings: ['Web Developer', 'Programer','Web Desiner','Software Developer','Computer Operater','Yoga Instructor'],
+      typeSpeed: 50,
+    });
+  </script>
+
+<!--- -------about---- -->
+<div id="about">
+    <div class="container">
+        <div class="row">
+            <div class="about-col-1">
+                <img src="prapti.jpeg" width="500" height="550" alt="">
+            </div>
+            <div class="about-col-2">
+                <h1 class="sub-title">About Me</h1>
+                <p>Motivated second-year B.com(CA) student with hands-on experience in software development through academic projects. Proficient in HTML, CSS, JAVASCRIPT, PHP, C, C++, OOP'S etc with a solid understanding of web development and database management. commitment to delivering high-quality results and fostering team collaboration.</p>
+          <div class="tab-titles">
+            <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+             <p class="tab-links" onclick="opentab('experience')">Experience</p>
+             <p class="tab-links" onclick="opentab('education')">Education</p>
+          </div>
+          <div class="tab-contents active-tab" id="skills">
+            <ul>
+                <li><span>C</span></li>
+                <LI>C++</LI>
+                <LI><span>HTML</span></LI>
+                <LI>CSS</LI>
+                <LI><span>PHP</span></LI>
+                <LI>Bootstrap</LI>
+                
+                <LI><span>JAVA</span></LI>
+                <LI>Python</LI>
+                <LI><span>Linux</span></LI>
+               
+              
+
+
+            </ul>
+          </div>
+           <div class="tab-contents" id="experience">
+            <ul>
+                <li><span>Data Visualization Intern (Micro-Internship)Tata Group | 19 june</span></li>
+                <LI>Completed a simulation-based micro-internship designed by Tata Group executives on the Forage platform.</LI>
+                <LI><span></span></LI>
+                <LI></LI>
+                <LI><span></span></LI>
+                <LI></LI>
+                <li><span></span></li>
+
+            </ul>
+            </div>
+              <div class="tab-contents" id="education">
+            <ul>
+                <li><span>(2023 - 2027)</span></li>
+                <LI>Bachelor In Computer Application. I'm currently pursuing   B.Com (CA).</LI>
+                <LI><span>(2022-2023)</span></LI>
+                <LI>XII My academic journey has been an enriching blend of commerce and information technology. </LI>
+                <LI><span>(2020-2021)</span></LI>
+                <LI> X I have a solid foundation in mathematics and science, having dedicated considerable time to studying both subjects. </LI>
+
+            </ul>
+            </div>
+
+        </div>
+    </div>
+</div>
+<!----- services -->
+<div id="services">
+    <div class="container">
+          <h1 class="sub-title">My Services</h1>
+            <div class="services-list">
+            <div>
+                <i class="fa-solid fa-mobile-screen-button"></i>
+               <img src="mo.png" alt="">
+            <h2>Web Design</h2>
+            <p>Gained hands-on experience in web design, focusing on creating and optimizing user-friendly websites.</p>
+            <a href="#">Learn more</a>
+
+            </div>
+            <div>
+            <i class="fa-solid fa-code"></i>
+               <img src="code.png" alt="">
+            <h2>Web Development</h2>
+            <p>Utilized HTML, CSS, and JavaScript to create user-friendly interfaces and improve functionality.</p>
+            <a href="#">Learn more</a>
+            
+            </div><div>
+                <img src="pp.png" alt="">
+                <i class="fa-solid fa-palette"></i>
+            <h2>Software Development</h2>
+            <p>Utilized programming languages such as C, C++ to develop and optimize software solutions.</p>
+            <a href="#">Learn more</a>
+            
+            </div>
+                       <div>
+                <img src="s.png" alt="" color="white">
+                <i class="fa-solid fa-palette"></i>
+            <h2>Yoga Instructor</h2>
+            <p> Smile: The Yoga Enthusiast's Haven. Apart from programming, I am Yoga instructor. I am fitness enthusiast so i take fitness challenges everyday.</p>
+            <a href="#">Learn more</a>
+            
+            </div>
+          </div>
+    </div>
+
+</div>
+<!---- portfolio -->
+<div id="portfolio">
+    <div class="container">
+                  <h1 class="sub-title">My work</h1>
+    <div class="work-list">
+        <div class="work">
+            <img src="forum.png" alt="">
+            <div class="layer">
+                <h3>Forum Website</h3>
+                <p>A forum website where users can discuss various topics, share ideas, and connect with like-minded individuals.</p>
+                <a href="#"><!--<img src="link.png" alt="">---></a>
+            </div>
+        </div>
+         <div class="work">
+            <img src="donate.jpg" alt="">
+              <div class="layer">
+                <h3>Donation Website</h3>
+                <p>A donation website where users can contribute to various causes and support charitable initiatives.</p>
+                <a href="#"><!--- <img src="link.png" alt="">--></a>
+            </div>
+        </div>
+
+
+       <!-----  
+       3rd project will be here:
+       <div class="work">
+            <img src="forum.png" alt="">
+
+              <div class="layer">
+                <h3>app Website</h3>
+                <p>A app website where users can discuss various topics, share ideas, and  connect with like-minded individuals.</p>
+                <a href="#">   <img link  </a>
+            </div>--->
+
+
+        </div>
+    </div>
+    <!---<a href="#" class="btn">See more</a>---->
+    </div>
+</div>
+<!----------------     contact    --------->
+<div id="contact">
+    <div class="container">
+       <div class="row">
+            <div class="contact-left">
+                <h1 class="sub-title">Contact Me</h1>
+                <p><img src="sss.png" alt="">praptifatangare0@gmail.com</p>
+                <p><img src="t.png" width="30">+91 8329191046 / 9518989497</p>
+                <div class="social-icon">
+                    <a href=""><img src="call.png"width="60%"alt="" ></a>
+                    <a href=""><img src="mail.png" alt=""></a>
+                    <a href=""><img src="llink.png" alt=""></a>
+                </div>
+                <a href="r.jpg.jpeg"  class="btn btn2">View CV</a>
+            </div>
+                      <div class="contact-right">             
+                               <form action="connect.php" method="post">
+                    <input type="text" name="Name" placeholder="Your Name" required>
+                    <input type="email" name="email" placeholder="Your Email" required>
+                    <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
+                    <button type="submit" class="btn btn2">Submit</button>
+                </form>
+            </div>
+        </div>
+    </div>
+    <div class="copyright">
+        <p>copyright &#169: praptiportfolio.com <img src="heart.png" width="1%"alt=""> All rights Reserved</p>
+    </div>
+</div>
+<script>
+var tablinks = document.getElementsByClassName("tab-links");
+var tabcontents = document.getElementsByClassName("tab-contents");
+
+function opentab(tabname){
+    for(tablink of tablinks){
+        tablink.classList.remove("active-link");
+    }
+    for(tabcontent of tabcontents){
+        tabcontent.classList.remove("active-tab");
+    }
+    event.currentTarget.classList.add("active-link");
+    document.getElementById(tabname).classList.add("active-tab");
+}
+</script>
+
+
+</body>
+</html>
